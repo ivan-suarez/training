@@ -15,5 +15,12 @@ spec:
       containers:
       - name: my-container
         image: ivansuarez/spring-app:latest
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://localhost:5432/postgres"
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "postgres"
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "123456"
         ports:
         - containerPort: 8080
