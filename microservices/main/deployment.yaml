@@ -17,10 +17,10 @@ spec:
         image: ivansuarez/my-spring-app:latest
         env:
         - name: SPRING_DATASOURCE_URL
-          value: "jdbc:postgresql://localhost:5432/postgres"
+          value: "jdbc:postgresql://postgres:5432/postgres"
         - name: SPRING_DATASOURCE_USERNAME
-          value: "postgres"
+          value: "admin"
         - name: SPRING_DATASOURCE_PASSWORD
-          value: "123456"
+          value: "admin"
         ports:
         - containerPort: 8080
