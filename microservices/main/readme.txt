@@ -9,6 +9,6 @@ curl -X PUT http://localhost:8080/api/products/1 -H "Content-Type: application/j
 curl -X DELETE http://localhost:8080/api/products/1
 
 
-docker build -t spring-app .
-docker tag spring-app:latest ivansuarez/spring-app:latest
-docker push ivansuarez/spring-app:latest
+docker build -t my-spring-app .
+docker tag my-spring-app:latest ivansuarez/my-spring-app:latest
+docker push ivansuarez/my-spring-app:latest

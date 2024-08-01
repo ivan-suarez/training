@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring-app
+      app: my-spring-app
   template:
     metadata:
       labels:
-        app: spring-app
+        app: my-spring-app
     spec:
       containers:
       - name: my-container
-        image: ivansuarez/spring-app:latest
+        image: ivansuarez/my-spring-app:latest
         env:
         - name: SPRING_DATASOURCE_URL
           value: "jdbc:postgresql://localhost:5432/postgres"

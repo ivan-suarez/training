@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: curlpod
+  labels:
+    purpose: curl
+spec:
+  containers:
+  - name: curl
+    image: curlimages/curl:7.78.0
+    command: ["sleep", "3600"]
