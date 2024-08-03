@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: side-micro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: side-micro
+  template:
+    metadata:
+      labels:
+        app: side-micro
+    spec:
+      containers:
+      - name: my-container
+        image: ivansuarez/side-micro:latest
+        ports:
+        - containerPort: 8081
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: side-deploy
+spec:
+  selector:
+    app: side-micro  # This should match the labels of your microservice pods
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081  # The port your microservice is listening on

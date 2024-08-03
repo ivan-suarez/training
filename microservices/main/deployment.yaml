@@ -22,5 +22,7 @@ spec:
           value: "admin"
         - name: SPRING_DATASOURCE_PASSWORD
           value: "admin"
+        - name: MICROSERVICE_URL
+          value: "http://side-deploy:8081/test"
         ports:
         - containerPort: 8080
